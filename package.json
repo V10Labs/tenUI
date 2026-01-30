@@ -1,0 +1,17 @@
+{
+  "name": "@tenui/monorepo",
+  "private": true,
+  "workspaces": ["packages/*", "playground/*"],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "test": "yarn workspaces run test",
+    "lint": "eslint packages/**/*.{ts,tsx}",
+    "clean": "yarn workspaces run clean",
+    "dev": "yarn workspace @tenui/playground dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "eslint": "^8.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
